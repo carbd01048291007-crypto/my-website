@@ -236,7 +236,9 @@
 
   /* ----- 보험 ----- */
   .insurance { padding-block: var(--section); }
-  .insurers { font-family: var(--serif); font-weight: 500; font-size: var(--step-2); margin: 0 0 2.5rem; line-height: 1.5; display: flex; flex-wrap: wrap; gap: 0 1.5rem; }
+  .insurers { font-family: var(--serif); font-weight: 500; font-size: var(--step-2); margin: 0 0 2.5rem; line-height: 1.5; display: flex; flex-wrap: wrap; gap: .75rem 1.75rem; align-items: center; }
+  .insurers span { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; }
+  .insurers img { width: 44px; height: 44px; flex: none; }
   .light th, .light td { border-color: var(--mist-line) !important; }
   .light td.desc { color: var(--ink-soft); }
   .ins-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
@@ -530,7 +532,7 @@
     <div class="wrap">
       <h2 class="section-title">모든 기사가 보험에 가입되어 있습니다</h2>
       <p class="section-intro">운행하는 차량 종류와 보험 종류에 따라 3,000만원에서 1억원까지 보험 처리가 됩니다. 버스, 화물, 위험물 운송에는 해당 자격을 가진 기사만 배정합니다.</p>
-      <p class="insurers" aria-label="가입 보험사"><span>DB손해보험</span><span>KB손해보험</span><span>메리츠화재</span><span>현대해상</span><span>롯데손해보험</span><span>삼성화재</span></p>
+      <p class="insurers" aria-label="가입 보험사"><span><img src="images/logo-db.png" alt="" width="44" height="44">DB손해보험</span><span><img src="images/logo-kb.png" alt="" width="44" height="44">KB손해보험</span><span><img src="images/logo-meritz.png" alt="" width="44" height="44">메리츠화재</span><span>현대해상</span><span>롯데손해보험</span><span>삼성화재</span></p>
 
       <div class="ins-grid">
         <div>

@@ -219,15 +219,18 @@
   .recent-head .section-intro { margin-bottom: 0; }
   .recent-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: clamp(.75rem, 2vw, 1.25rem); }
   .recent-grid figure { margin: 0; display: flex; flex-direction: column; }
-  .recent-grid figure:first-child { grid-row: span 2; }
+  .recent-grid figure.wide { grid-column: 1 / -1; }
+  .recent-grid figure.wide img { aspect-ratio: 2 / 1; object-position: center 55%; }
+  .recent-grid figure.tall { grid-row: span 2; }
   .recent-grid img { display: block; width: 100%; flex: 1; min-height: 0; object-fit: cover; border-radius: 3px; aspect-ratio: 4 / 3; }
-  .recent-grid figure:first-child img { aspect-ratio: auto; height: 100%; }
+  .recent-grid figure.tall img { aspect-ratio: auto; height: 100%; }
   .recent-grid figcaption { font-size: var(--step--1); color: var(--sage); padding-top: .6rem; }
   .recent-grid figcaption b { color: var(--ivory); font-weight: 500; display: block; }
   @media (max-width: 640px) {
     .recent-grid { grid-template-columns: 1fr; }
-    .recent-grid figure:first-child { grid-row: auto; }
-    .recent-grid figure:first-child img { aspect-ratio: 3 / 4; height: auto; }
+    .recent-grid figure.tall { grid-row: auto; }
+    .recent-grid figure.tall img { aspect-ratio: 3 / 4; height: auto; }
+    .recent-grid figure.wide img { aspect-ratio: 4 / 3; }
   }
 
   /* ----- 이용 순서 ----- */
@@ -520,12 +523,16 @@
     <div class="recent-head">
       <div>
         <h2 class="section-title">최근에 옮긴 차량</h2>
-        <p class="section-intro">작은 승용차부터 크레인 트럭까지, 실제로 맡았던 차량입니다.</p>
+        <p class="section-intro">롤스로이스부터 크레인 트럭까지, 실제로 맡았던 차량입니다.</p>
       </div>
       <a class="btn btn-line" href="https://www.youtube.com/@%ED%83%81%EC%86%A1" target="_blank" rel="noopener">탁송 영상 더 보기</a>
     </div>
     <div class="recent-grid">
-      <figure>
+      <figure class="wide">
+        <img src="images/rolls-royce.jpg" alt="전시장에 세워진 롤스로이스" width="773" height="435" loading="lazy">
+        <figcaption><b>롤스로이스</b>부산·대구 구간 탁송</figcaption>
+      </figure>
+      <figure class="tall">
         <img src="images/sprinter-front.jpg" alt="출고장에서 인수한 노란색 벤츠 스프린터 신차" width="900" height="1200" loading="lazy">
         <figcaption><b>벤츠 스프린터 20인승 신차</b>천안 출고장에서 김제까지</figcaption>
       </figure>
